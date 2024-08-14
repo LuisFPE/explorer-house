@@ -19,10 +19,48 @@ Explorer House es un portal inmobiliario el cual permite ver y publicar todo tip
 - Este sitio web esta construida con React y Sass.
 - Los términos de uso y la política de privacidad son decididos por los creadores del sitio web.
 
-## Requisitos
+### Instalación
 
-- Conexión a Internet para acceder al sitio web.
-- Registrarse, loguearse y respetar los terminos de uso.
+1. Clonar el repositorio en terminal:
+   git clone <URL-del-repositorio>
+   cd <nombre-del-proyecto>
+
+2. Instalar las dependencias:
+    npm install
+    Configurar las variables de entorno:
+    Crear un archivo .env en la raíz del proyecto con el siguiente contenido (actualizar con sus propios valores):
+
+3. Crear en raiz .env 
+
+    DB_HOST = explorerHouse
+    DB_PORT = 270
+    DB_USER = nombre_de_usuario
+    DB_PASSWORD = tu_contraseña
+    DB_NAME = explorerHouse
+    
+    JWT_SECRET = donpitojuanotocaelpiano
+    SESSION_SECRET = donpitojuanotocaelpiano
+    
+    APP_PORT = 3016
+    APP_HOST = explorerHouse
+   
+
+4.  Iniciar el servidor y el front desde la terminal:
+   
+     - **Servidor**:
+    
+         ```bash
+         cd backend
+         docker compose up
+         ```
+    
+       - **Cliente**:
+    
+         ```bash
+         cd frontend
+         npm run dev
+         ```
+
 
 ## Autor
 
