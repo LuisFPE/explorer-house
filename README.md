@@ -47,19 +47,19 @@ Explorer House es un portal inmobiliario el cual permite ver y publicar todo tip
 
 4.  Iniciar el servidor y el front desde la terminal:
    
-     - **Servidor**:
-    
-         ```bash
-         cd backend
-         docker compose up
-         ```
-    
-       - **Cliente**:
-    
-         ```bash
-         cd frontend
-         npm run dev
-         ```
+   - **Servidor**:
+   
+      ```bash
+      cd backend
+      docker compose up
+      ```
+       
+   - **Cliente**:
+   
+      ```bash
+      cd frontend
+      npm run dev
+      ```
 
 
 ## Autor
