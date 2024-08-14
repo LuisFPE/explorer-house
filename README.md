@@ -31,19 +31,15 @@ Explorer House es un portal inmobiliario el cual permite ver y publicar todo tip
     Crear un archivo .env en la raíz del proyecto con el siguiente contenido (actualizar con sus propios valores):
 
 3. Crear en raiz .env 
-
-    DB_HOST = explorerHouse
-    DB_PORT = 270
-    DB_USER = nombre_de_usuario
-    DB_PASSWORD = tu_contraseña
-    DB_NAME = explorerHouse
-    
-    JWT_SECRET = donpitojuanotocaelpiano
-    SESSION_SECRET = donpitojuanotocaelpiano
-    
-    APP_PORT = 3016
-    APP_HOST = explorerHouse
-   
+    DB_HOST=explorerHouse
+    DB_PORT=27025
+    DB_USER=nombre_de_usuario
+    DB_PASSWORD=tu_contraseña
+    DB_NAME=explorerHouse
+    JWT_SECRET=donpitojuanotocaelpiano
+    SESSION_SECRET=donpitojuanotocaelpiano
+    APP_PORT=3016
+    APP_HOST=explorerHouse
 
 4.  Iniciar el servidor y el front desde la terminal:
    
