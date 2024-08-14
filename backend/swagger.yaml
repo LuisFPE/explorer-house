@@ -1,0 +1,404 @@
+swagger: '2.0'
+info:
+  title: Explorer House
+  description: Explorer House es un portal inmobiliario el cual permite ver y publicar todo tipo de propiedades inmobiliarias de manera facil y sencilla para todos los usuarios de la aplicacion idependientemente de si quieren ver diferentes propiedades o publicar una propiedad.
+  version: 1.0.0
+host: explorerhouse.com
+basePath: /api
+securityDefinitions:
+  bearerAuth:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: 'Enter the token with the `Bearer: ` prefix, e.g. "Bearer abcde12345".'
+security:
+  - bearerAuth: []
+tags:
+  - name: User
+    description: User management
+  - name: Propiedad
+    description: Propiedades management
+  - name: Cita
+    description: Citas management
+paths:
+  /:
+    get:
+      summary: Get API greeting
+      responses:
+        '200':
+          description: Successful response
+  /user:
+    get:
+      summary: Get all users
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: Create a new user
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Successful response
+  /user/{userId}:
+    get:
+      summary: Get a user by ID
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+    put:
+      summary: Update a user
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+        - name: user
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Successful response
+    delete:
+      summary: Delete a user
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+  /user/byproperty:
+    get:
+      summary: Get users by property
+      tags:
+        - User
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: property
+          in: query
+          required: true
+          type: string
+        - name: value
+          in: query
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+  /register:
+    post:
+      summary: Register a new user
+      tags:
+        - User
+      parameters:
+        - name: user
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Successful response
+  /login:
+    post:
+      summary: Login a user.
+      tags:
+        - User
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Credentials'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Token'
+  /propiedad:
+    get:
+      summary: Get all Propiedads
+      tags:
+        - Propiedad
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Propiedad'
+    post:
+      summary: Create a new Propiedad
+      tags:
+        - Propiedad
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Propiedad
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Propiedad'
+      responses:
+        '200':
+          description: Successful response
+  /propiedad/find:
+    post:
+      summary: Get by property
+      tags:
+        - Propiedad
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Propiedad'
+  /propiedad/update/{PropiedadId}:
+    post:
+      summary: Update a Propiedad
+      tags:
+        - Propiedad
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: PropiedadId
+          in: path
+          required: true
+          type: string
+        - name: Propiedad
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Propiedad'
+      responses:
+        '200':
+          description: Successful response
+  /propiedad/remove/{PropiedadId}:
+    post:
+      summary: Remove a Propiedad
+      tags:
+        - Propiedad
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: PropiedadId
+          in: path
+          required: true
+          type: string
+        - name: Propiedad
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Propiedad'
+      responses:
+        '200':
+          description: Successful response
+  /cita:
+    get:
+      summary: Get all Citas
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: PropiedadId
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Cita'
+    post:
+      summary: Create a new Cita
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Cita
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Cita'
+      responses:
+        '200':
+          description: Successful response
+  /cita/{CitaId}:
+    get:
+      summary: Get a Cita by ID
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: CitaId
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Cita'
+  /cita/find:
+    post:
+      summary: Get by property
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Cita'
+  /cita/update/{PropiedadId}:
+    post:
+      summary: Update a Propiedad
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: PropiedadId
+          in: path
+          required: true
+          type: string
+        - name: Propiedad
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Cita'
+      responses:
+        '200':
+          description: Successful response
+  /cita/remove/{PropiedadId}:
+    post:
+      summary: Remove a Propiedad
+      tags:
+        - Cita
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: PropiedadId
+          in: path
+          required: true
+          type: string
+        - name: Propiedad
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Cita'
+      responses:
+        '200':
+          description: Successful response  
+definitions:
+  User:
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+      passwordRepeat:
+        type: string
+      role:
+        type: string
+        enum:
+          - user
+          - admin
+  Credentials:
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+  Token:
+    type: object
+    properties:
+      token:
+        type: string
+  Propiedad:
+    type: object
+    properties:
+      tipo:
+        type: string
+      ciudad:
+        type: string
+      descripcion:
+        type: string
+      habitaciones:
+        type: string
+      metros:
+        type: string
+      altura:
+        type: string
+      precio:
+        type: string        
+      vendor:
+        type: string
+      imagen:
+        type: string
+  Cita:
+    type: object
+    properties:
+      username:
+        type: string
+      propiedad:
+        type: string
+      date:
+        type: string
+      vendor:
+        type: string
+      place:
+        type: string
+      state:
+        type: string
+         
+ 

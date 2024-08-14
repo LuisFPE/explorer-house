@@ -1,0 +1,297 @@
+@import "./colors.scss";
+
+
+@media (max-width: 749px) {
+
+    #nuevo-cuerpo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50vh;
+    }
+
+    #citas-rotulo {
+        text-align: center;
+    }
+
+    #nuevo-rotulo {
+        text-align: center;
+    }
+
+    #nuevo-citas-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        & > #div-citas {
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            width: max-content;
+            padding: 10px;
+            margin: 10px;
+            width: 85%;
+            align-items: center;
+            border: solid blue 2px;
+
+            & > #div-citas-ul {
+                margin-right: 15px;
+            }
+
+            & > #div-citas-img {
+                width: 85%;
+                border-radius: 25px;
+                margin-bottom: 10px;
+            }
+
+            & > #div-citas-buttons {
+                margin: 10px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                & input {
+                    font-size: 1.1rem;
+                    border-radius: 10px;
+                    padding: 5px 8px;
+                    cursor: pointer;
+                    border: 0;
+                }
+
+                & > .button-aceptar:hover {
+                    background-color: rgb(26, 133, 35);
+                    color: beige;
+                }
+
+                & > .button-denegar:hover {
+                    background-color: rgb(138, 28, 28);
+                    color: beige;
+                }
+            }
+
+        }
+
+    }
+
+    .aceptada {
+        background-color: rgb(0, 255, 21);
+    }
+
+    .denegada {
+        background-color: rgb(255, 87, 87);
+    }
+
+    .pendiente {
+        background-color: rgb(248, 248, 61);
+    }
+
+    #nuevo-div-form {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+
+        & > #nuevo-form {
+            display: flex;
+            flex-direction: column;        
+            width: 90%;
+
+            & input {
+                font-size: 1.1rem;
+                margin: 5px 0;
+                border-radius: 10px;
+                padding: 5px 15px;
+                
+            }
+
+            & > #nuevo-button {
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 650;
+                background-color: $amarillo;
+                color: white;
+            }
+        }
+    }
+
+    .file-select {
+        position: relative;
+        display: inline-block;
+        width: 80%;
+    }
+    
+    .file-select::before {
+        background-color: $azulPastel;
+        border: 2px solid $azulReal;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        content: 'Seleccionar Imagen'; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+    
+    .file-select input[type="file"] {
+        opacity: 0;
+        width: 200px;
+        height: 32px;
+        display: inline-block;
+    }
+    
+
+    #div-citas-delete {
+        text-align: center;
+    }
+}
+
+@media (min-width: 750px) {
+        
+    #nuevo-cuerpo {        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-top: 20vh;
+    }
+
+    #citas-rotulo {
+        text-align: center;
+    }
+
+    #nuevo-rotulo {
+        text-align: center;
+    }
+
+    #nuevo-citas-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+
+        & > #div-citas {
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            width: max-content;
+            padding: 10px;
+            margin: 10px;
+            width: 75%;
+            align-items: center;
+            border: solid blue 2px;
+
+            & > #div-citas-ul {
+                margin-right: 15px;
+            }
+
+            & > #div-citas-img {
+                width: 85%;
+                border-radius: 25px;
+                margin-bottom: 10px;
+            }
+
+            & > #div-citas-buttons {
+                margin: 10px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                & input {
+                    font-size: 1.1rem;
+                    border-radius: 10px;
+                    padding: 5px 8px;
+                    cursor: pointer;
+                    border: 0;
+                }
+
+                & > .button-aceptar:hover {
+                    background-color: rgb(26, 133, 35);
+                    color: beige;
+                }
+
+                & > .button-denegar:hover {
+                    background-color: rgb(138, 28, 28);
+                    color: beige;
+                }
+            }
+
+        }
+
+    }
+
+    .aceptada {
+        background-color: rgb(0, 255, 21);
+    }
+
+    .denegada {
+        background-color: rgb(255, 87, 87);
+    }
+
+    .pendiente {
+        background-color: rgb(248, 248, 61);
+    }
+
+    #nuevo-div-form {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+        & > #nuevo-form {
+            display: flex;
+            flex-direction: column;
+
+            & input {
+                font-size: 1.1rem;
+                margin: 5px 0;
+                border-radius: 10px;
+                padding: 5px 15px;
+                
+            }
+
+            & > #nuevo-button {
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 650;
+                background-color: $amarillo;
+                color: white;
+            }
+        }
+    }
+
+    .file-select {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+    }
+    
+    .file-select::before {
+        background-color: $azulPastel;
+        border: 2px solid $azulReal;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        content: 'Seleccionar Imagen'; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+    
+    .file-select input[type="file"] {
+        opacity: 0;
+        width: 200px;
+        height: 32px;
+        display: inline-block;
+    }
+    
+
+    #div-citas-delete {
+        text-align: center;
+    }
+}

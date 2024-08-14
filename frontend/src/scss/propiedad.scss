@@ -1,0 +1,83 @@
+@media (max-width: 749px) {
+    #propiedad-cuerpos {
+        margin-top: 50vh;
+    }
+    
+    #rotulo-h1 {
+        text-align: center;
+    }
+    
+    #div-propiedad-html {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    
+        & > #div-propiedad-cuadro {
+            display: flex;
+            flex-direction: column;
+            border: solid 2px blue;
+            border-radius: 15px;
+            width: 75%;
+            padding: 10px;
+            margin: 10px;
+    
+            & > #div-cuadro-rotulo {
+                text-align: center;
+            }
+        
+            & > #descripcion-propiedad {
+                text-align: center;
+            }
+    
+            & > #img-propiedades {
+                width: 95%;
+                border-radius: 15px;
+                border: 3px solid white;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 750px) {
+    #propiedad-cuerpos {
+        margin-top: 130px;
+    }
+    
+    #rotulo-h1 {
+        text-align: center;
+    }
+    
+    #div-propiedad-html {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0 15px;
+    
+        & > #div-propiedad-cuadro {
+            display: flex;
+            flex-direction: column;
+            border: solid 2px blue;
+            border-radius: 15px;
+            width: 75%;
+            padding: 10px;
+            margin: 10px;
+    
+            & > #div-cuadro-rotulo {
+                text-align: center;
+            }
+        
+            & > #descripcion-propiedad {
+                text-align: center;
+            }
+    
+            & > #img-propiedades {
+                width: 95%;
+                border-radius: 15px;
+                border: 3px solid white;
+            }
+        }
+    }
+
+}

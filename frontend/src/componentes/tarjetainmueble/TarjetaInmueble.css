@@ -1,0 +1,46 @@
+.tarjeta-inmueble {
+  background-color:#0056b3;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #0000001a;
+  padding: 16px;
+  max-width: 300px;
+  margin: 16px;
+  text-align: left;
+}
+
+.tarjeta-titulo {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.tarjeta-descripcion {
+  font-size: 1em;
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.tarjeta-detalles {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.tarjeta-detalles li {
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.tarjeta-boton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.tarjeta-boton:hover {
+  background-color: #0056b3;
+}

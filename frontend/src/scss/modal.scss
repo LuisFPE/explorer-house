@@ -1,0 +1,99 @@
+@import "./colors.scss";
+
+.modal {   
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .modal-content {
+    background-color: $azulPastel;
+    position: relative;
+    padding: 25px;
+    border-radius: 25px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+    
+  #completo {
+    display: flex;
+  }
+  
+  #completo div {
+    padding: 0 20px;
+  }
+
+
+#completo {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+
+  & > #modal-enviado {
+    text-align: center;
+    color: rgb(8, 124, 8);
+    font-size: 2rem;
+  }
+
+  & > #modal-rechazado {
+    text-align: center;
+    color: rgb(138, 11, 11);
+    font-size: 2rem;
+    margin-top: -25px;
+  }
+
+  & > #modal-rotulo {
+    text-align: center;
+    margin: 0;
+  }
+
+  & > #modal-form {
+
+    & > #modal-mensaje {
+      margin-top: 20px;
+      border-radius: 25px;
+      border: 0;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+
+  & > #modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+    & > .buttonModal {
+      margin-top: 25px;
+      font-size: 1.5rem;
+      border: 0;
+      border-radius: 15px;
+      padding: 5px 20px;
+      background-color: $amarillo;
+      cursor: pointer;
+      font-weight: bolder;
+      color: white;
+
+      &:hover {
+        background-color: blue;
+        color: white;
+      }
+    }
+  }
+
+}

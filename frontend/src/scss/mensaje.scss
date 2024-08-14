@@ -1,0 +1,94 @@
+#mensajes-cuerpo{
+    margin-top: 130px;
+
+    & h1 {
+        text-align: center;
+    }
+
+    & > #div-mensajes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#div-mensaje-cuadro-pendiente {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: yellow;
+    border: 2px solid blue;
+    padding: 5px 30px 5px 0;
+    margin: 15px;
+}
+
+#div-mensaje-cuadro-visto {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: aquamarine;
+    border: 2px solid blue;
+    padding: 5px 30px 5px 0;
+    margin: 15px;
+}
+
+li {
+    margin: 3px 0;
+}
+
+#div-mensaje-cuadro-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons-mensaje, .buttonModal {
+    font-size: 1.25rem;
+    border: 0;
+    border-radius: 25px;
+    padding: 3px 20px;
+    margin-bottom: 15px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#modal-form > #modal-mensaje {
+    border-radius: 25px;
+    border: 0;
+    padding: 5px 20px;
+    font-size: 1.15rem;
+}
+
+#modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: -20px;
+}
+
+#modal-enviado {
+    text-align: center;
+    color: rgb(8, 124, 8);
+    font-size: 2rem;
+}
+
+#modal-rechazado {
+    text-align: center;
+    color: rgb(138, 11, 11);
+    font-size: 2rem;
+    margin-top: -25px;
+}
+
+@media (max-width: 750px) {
+    #mensajes-cuerpo {
+        margin-top: 375px;
+    }
+
+    #mensajes-cuerpo > #div-mensajes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+}

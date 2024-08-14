@@ -1,0 +1,304 @@
+@import "./colors.scss";
+
+@media (max-width: 749px) {
+    .div-circular{
+        border-radius: 50%;
+        width: 45vw;
+        height: 45vw;
+        position: fixed;
+        z-index: -100;
+    }
+
+    #circulo-forma{
+        background-color: $amarillo;
+        bottom: -22.5vw;
+        left: -22.5vw;
+    }
+    
+    #circulo-forma2{
+        background-color: $amarillo;
+
+        top: -22.5vw;
+        right: -22.5vw;
+    }
+
+    #circulo-forma3{
+        background-color: $azulPastel;
+        top: -22.5vw;
+        left: -22.5vw;
+    }
+    
+    #circulo-forma4{
+        background-color: $azulPastel;
+        bottom: -22.5vw;
+        right: -22.5vw;
+    }
+
+    #login-header {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+    
+        & > #login-center {
+            width: 80%;
+            text-align: center;
+    
+            & h1 {
+                text-align: center;
+            }
+    
+            & > #mensaje {
+                color: $azulReal;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-top: 5vh;
+                margin-bottom: 0px;        
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    
+    #login-html {
+        width: 100vw;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-items: center;
+        margin-top: 10vh;
+
+
+        & #login-inicio, #login-nuevo {
+            display: flex;
+            flex-direction: column;
+            background-color: whitesmoke;
+            border: 2px solid $azulReal;
+            border-radius: 25px;
+            padding: 2vw 5vw;
+            width: 70vw;
+            margin-bottom: 8vh;
+        }
+
+        & h2 {
+            text-align: center;
+        }
+
+        & input {
+            border-radius: 15px;
+            padding: 3px 15px;
+            margin: 6px 0;
+            font-size: 1.2rem;
+        }
+
+        & #login-submit {
+            margin-top: 20px;
+            background-color: $azulPastel;
+            border: 2px solid $azulReal;
+            color: whitesmoke;
+            font-weight: bolder;
+        }
+    }
+
+    #login-cuadro-inicio:hover {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-items: center;
+
+        & #login-inicio, #login-nuevo {
+            display: flex;
+            flex-direction: column;
+            background-color: $azulPastel;
+            border: 2px solid $azulReal;
+        }
+
+        & h2 {
+            color: white;
+        }
+
+        & #login-submit {
+            background-color: whitesmoke;
+            border: 2px solid $azulReal;
+            color: $azulReal;
+            cursor: pointer;
+        }
+    }
+
+   #login-cuadro-nuevo:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-items: center;
+
+    & #login-inicio, #login-nuevo {
+        display: flex;
+        flex-direction: column;
+        background-color: $azulPastel;
+        border: 2px solid $azulReal;
+    }
+
+    & h2 {
+        color: white;
+    }
+
+    & #login-submit {
+        background-color: whitesmoke;
+        border: 2px solid $azulReal;
+        color: $azulReal;
+        cursor: pointer;
+    }
+}
+}
+
+@media (min-width: 750px) {
+
+    .div-circular{
+        border-radius: 50%;
+        width: 25vw;
+        height: 25vw;
+        position: fixed;
+        z-index: -100;
+    }
+
+    #circulo-forma{
+        background-color: $amarillo;
+        bottom: -12.5vw;
+        left: -12.5vw;
+    }
+    
+    #circulo-forma2{
+        background-color: $amarillo;
+        top: -12.5vw;
+        right: -12.5vw;
+    }
+
+    #circulo-forma3{
+        background-color: $azulPastel;
+        top: -12.5vw;
+        left: -12.5vw;
+        
+    }
+    
+    #circulo-forma4{
+        background-color: $azulPastel;
+        bottom: -12.5vw;
+        right: -12.5vw;
+    }
+
+    #login-header {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+    
+        & > #login-center {
+            width: 80%;
+            text-align: center;
+    
+            & h1 {
+                text-align: center;
+            }
+    
+            & > #mensaje {
+                color: $azulReal;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-top: 5vh;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    
+    #login-html {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-items: center;
+        margin-top: 10vh;
+
+        & #login-inicio, #login-nuevo {
+            display: flex;
+            flex-direction: column;
+            background-color: whitesmoke;
+            border: 2px solid $azulReal;
+            border-radius: 25px;
+            padding: 15px 25px;
+        }
+
+        & h2 {
+            text-align: center;
+        }
+
+        & input {
+            border-radius: 15px;
+            padding: 3px 15px;
+            margin: 6px 0;
+            font-size: 1.2rem;
+        }
+
+        & #login-submit {
+            margin-top: 20px;
+            background-color: $azulPastel;
+            border: 2px solid $azulReal;
+            color: whitesmoke;
+            font-weight: bolder;
+        }
+    }
+
+    #login-cuadro-inicio:hover {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        justify-items: center;
+
+        & #login-inicio, #login-nuevo {
+            display: flex;
+            flex-direction: column;
+            background-color: $azulPastel;
+            border: 2px solid $azulReal;
+        }
+
+        & h2 {
+            color: white;
+        }
+
+        & #login-submit {
+            background-color: whitesmoke;
+            border: 2px solid $azulReal;
+            color: $azulReal;
+            cursor: pointer;
+        }
+    }
+
+   #login-cuadro-nuevo:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-items: center;
+
+    & #login-inicio, #login-nuevo {
+        display: flex;
+        flex-direction: column;
+        background-color: $azulPastel;
+        border: 2px solid $azulReal;
+    }
+
+    & h2 {
+        color: white;
+    }
+
+    & #login-submit {
+        background-color: whitesmoke;
+        border: 2px solid $azulReal;
+        color: $azulReal;
+        cursor: pointer;
+    }
+}
+}

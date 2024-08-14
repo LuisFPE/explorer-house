@@ -1,0 +1,120 @@
+.cabecera {
+  display: flex;
+  justify-content: left; 
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 0.1rem; 
+  z-index: 1000; 
+}
+
+.cabecera__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin-inline: 10px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.cabecera__left {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.cabecera__nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 0px;
+  align-items: center;
+}
+
+.dropdown__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem; 
+  font-size: 1rem; 
+}
+
+.dropdown {
+  position: relative; 
+}
+
+.dropdown__menu {
+  position: absolute;
+  width: 180px;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  display: block;
+  z-index: 1000;
+  align-items: left;
+}
+
+
+.texto {
+  margin-top: 0px;
+  margin-bottom: 2px;
+ margin-left: 20px;
+}
+
+.cabecera_icon {
+  width: 150px;
+  height: 70px;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+
+.usuario {
+  width: 30px;
+  height: 30px;
+}
+
+.linea {
+  display: flex;
+  justify-content: left;
+  position: fixed;
+  top: 80px;
+}
+
+.boton {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 16px; 
+  font-weight: 600;
+  padding: 0.5em 1em; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  max-height: 40px;
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.boton:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.boton:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
